@@ -1,0 +1,23 @@
+$link-color: blue;
+$vertical-margin: 1.5vh;
+
+@mixin fontz($a, $b) {
+    font-size: $a;
+    font-weight: $b;
+}
+
+%link {
+    @include fontz(x-large, bold);
+    color: $link-color;
+    text-align: center;
+    display: block;
+
+    &:hover {
+        opacity: 0.5;
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+}
