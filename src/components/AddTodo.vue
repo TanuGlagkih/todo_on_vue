@@ -1,8 +1,7 @@
-<template>
-    <form v-on:submit.prevent="onSubmit">
+<template lang="haml">
+    %form{v-on:submit.prevent:"onSubmit"}
         <input type="text" v-model="title" />
-        <button type="submit">Create</button>
-    </form>
+        %button{type:"submit"} Create 
 </template>
 
 <script>

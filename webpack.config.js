@@ -33,6 +33,12 @@ module.exports = {
                     "sass-loader",
                 ],
             },
+            {
+                test: /\.haml$/,
+                use: [{
+                    loader: 'haml-plain-loader'
+                }]
+            }
         ]
     },
     plugins: [

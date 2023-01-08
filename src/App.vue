@@ -1,9 +1,9 @@
-<template>
+<template lang="haml">
     <div>
-        <h1>Todo List</h1>
-        <hr />
-        <router-view />
-    </div>
+        %h1 Todo List
+        %hr /
+        %router-view /
+    </div>   
 </template>
 
 <script>

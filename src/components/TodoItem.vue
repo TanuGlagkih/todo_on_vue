@@ -1,12 +1,11 @@
-<template>
-    <li>
+<template lang="haml">
+    %li
         <span v-bind:class="{ done: todo.completed }">
             <input type="checkbox" v-on:change="todo.completed = !todo.completed" v-model="checked" />
-            <strong>{{ index + 1 }}</strong>
-            <p>{{ todo.title | uppercase }}</p>
+            %strong {{ index + 1 }} 
+            %p {{ todo.title | uppercase }}
         </span>
-        <button class="rm" v-on:click="$emit('remove-todo', todo.id)">&times;</button>
-    </li>
+        %button.rm{v-on:click:"$emit('remove-todo', todo.id)"} &times; 
 </template>
 
 <script>

@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "haml-plain-loader": "^1.0.0",
     "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.21",
     "sass": "^1.57.1",
@@ -25,6 +26,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "hamljs": "^0.6.2",
     "vue": "^2.7.14",
     "vue-router": "^3.6.5"
   }

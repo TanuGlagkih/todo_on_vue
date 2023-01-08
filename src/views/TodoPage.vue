@@ -1,16 +1,14 @@
-<template>
-    <div class="container">
-        <router-link to="/" class="link">Home</router-link>
-        <AddTodo v-on:add-todo="addTodo" />
-        <select v-model="filter">
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="not-completed"> Not completed</option>
-        </select>
-        <Loader v-if="loading" />
+<template lang="haml">
+    .container
+        %router-link{to:"/"}.link Home 
+        %AddTodo{v-on:add-todo:"addTodo"}
+        %select{v-model:"filter"}
+            %option{value:"all"} All
+            %option{value:"completed"} Completed
+            %option{value:"not-completed"} Not completed
+        %Loader{v-if:"loading"}
         <TodoList v-else-if='todos?.length' v-bind:todos="filteredTodos" @remove-todo="removeTodo" />
-        <p v-else>No todos! </p>
-    </div>
+        <p v-else>No todos! </p> 
 </template>
 
 <script>
